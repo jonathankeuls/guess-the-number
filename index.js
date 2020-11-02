@@ -20,6 +20,14 @@ function getUserGuess() {
 }
 
 
+//3
+document.addEventListener('keyup', function(event){
+    if (event.key === 'Enter') {
+        console.log(getUserGuess())
+    }
+})
+
+
 
 
 
