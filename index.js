@@ -28,10 +28,13 @@ document.addEventListener('keyup', function(event){
         console.log(userGuess)
         if (userGuess < secretNumber) {
             setMessage('Too low!')
+            clearInput()
         } else if (userGuess > secretNumber) {
             setMessage('Too big!')
+            clearInput()
         } else if (userGuess === secretNumber) {
             setMessage('You are correct!')
+            clearInput()
         }
     }
 })
@@ -39,6 +42,11 @@ document.addEventListener('keyup', function(event){
 //4
 function setMessage(msg) {
     document.getElementById('message').innerText = msg
+}
+
+//5
+function clearInput() {
+    document.getElementById('user-input').value = ''
 }
 
 
